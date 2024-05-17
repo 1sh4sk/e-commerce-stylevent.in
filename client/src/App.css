@@ -1,0 +1,16 @@
+/* colors
+purple-pink - #E0D1D1
+coffee - #5F3616
+black - #191919
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ font-family: "Poppins", sans-serif;
+ overflow-x: hidden;
+}
