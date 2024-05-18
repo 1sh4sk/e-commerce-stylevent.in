@@ -5,7 +5,11 @@ const Item = (props) => {
     return (
         <Wrapper className="item">
             <div className="img-div">
-                <Link to={`/product/${props.id}`}><img src={props.image} alt="" /></Link>
+                <Link to={`/product/${props.id}`}>
+                    <img src={props.image} alt="" onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                    }} />
+                </Link>
             </div>
             <p>{props.name}</p>
             <div className="item-prices">

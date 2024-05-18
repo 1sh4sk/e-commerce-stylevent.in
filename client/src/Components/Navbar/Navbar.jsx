@@ -2,11 +2,13 @@ import Wrapper from "./NavbarWrapper"
 
 import logo from '../../assets/logo.png'
 import { FaCartShopping } from "react-icons/fa6";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
     const [menu, setMenu] = useState("shop");
+    const { getTotalCartItems } = useContext(ShopContext);
 
     return (
         <Wrapper>
@@ -33,7 +35,7 @@ const Navbar = () => {
                 <Link to='/login' style={{ textDecoration: "none" }}><button>Login</button></Link>
                 <Link to='/cart' style={{ textDecoration: "none", color: "#515151" }}><FaCartShopping className="cart-icon" /></Link>
                 <div className="nav-cart-count">
-                    0
+                    {getTotalCartItems()}
                 </div>
             </div>
         </Wrapper>
