@@ -1,6 +1,6 @@
 import Wrapper from "./NewCollectionsWrapper"
 
-import new_collection from '../../assets/data'
+import new_collection from '../../assets/Assets/new_collections'
 import Item from "../Items/Item"
 
 const NewCollections = () => {

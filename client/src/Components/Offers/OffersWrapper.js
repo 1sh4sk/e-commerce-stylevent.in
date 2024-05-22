@@ -47,6 +47,84 @@ background: linear-gradient(180deg,#fde1ff 0%,#e1ffea22 60%);
     display: flex;
     justify-content: center;
 }
+
+@media(max-width: 1280px){
+    padding: 0px 80px;
+    margin-bottom: 120px;
+
+    .offers-left h1{
+        font-size: 40px;
+    }
+
+    .offers-left p{
+        font-size: 18px;
+    }
+.offers-left button{
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+}
+
+}
+
+@media(max-width: 1024px){
+    padding: 0px 60px;
+    margin-bottom: 80px;
+    height: 40vh;
+
+    .offers-left h1{
+        font-size: 30px;
+    }
+
+    .offers-left p{
+        font-size: 16px;
+    }
+.offers-left button{
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+}
+
+}
+
+@media(max-width: 800px){
+    margin-bottom: 60px;
+
+    .offers-left h1{
+        font-size: 22px;
+    }
+
+    .offers-left p{
+        font-size: 13px;
+    }
+.offers-left button{
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+}
+
+}
+
+@media(max-width: 500px){
+    height: 25vh;
+    margin-bottom: 50px;
+
+    .offers-left h1{
+        font-size: 15px;
+    }
+
+    .offers-left p{
+        font-size: 10px;
+    }
+
+    .offers-left button{
+    width: 120px;
+    height: 25px;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+}
 `;
 
 export default Wrapper;

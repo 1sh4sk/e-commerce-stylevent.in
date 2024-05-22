@@ -66,6 +66,36 @@ margin-top: 50px;
     height: 3px;
     background: #c7c7c7;
 }
+
+@media(max-width: 800px){
+    gap: 20px;
+    .footer-logo{
+        gap: 10px;
+        align-items: end;
+    }
+
+    .footer-logo img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-logo p{
+        font-size: 25px;
+    }
+
+    .footer-links{
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .footer-icons-container{
+        font-size: 20px;
+    }
+
+    .footer-copyright{
+        font-size: 13px;
+    }
+}
 `;
 
 export default Wrapper;

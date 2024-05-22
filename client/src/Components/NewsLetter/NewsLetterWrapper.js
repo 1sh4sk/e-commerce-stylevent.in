@@ -51,6 +51,119 @@ button{
     font-size: 16px;
     cursor: pointer;
 }
+
+@media(max-width: 1280px){
+    padding: 0px 80px;
+    margin-bottom: 120px;
+    gap: 20px;
+
+    h1{
+        font-size: 36px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    div{
+        width: 600px;
+        height: 60px;
+    }
+
+   div input{
+        width: 400px;
+    }
+
+    div button{
+        width: 160px;
+        height: 60px;
+
+    }
+}
+
+@media(max-width: 1024px){
+    margin-bottom: 60px;
+
+    h1{
+        font-size: 28px;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    div{
+        width: 500px;
+        height: 50px;
+    }
+
+   div input{
+        width: 300px;
+        font-size: 14px;
+    }
+
+    div button{
+        width: 120px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 800px){
+    margin-bottom: 30px;
+    height: 35vh;
+
+    h1{
+        font-size: 18px;
+    }
+
+    p{
+        font-size:12px;
+    }
+
+    div{
+        width: 400px;
+        height: 40px;
+    }
+
+   div input{
+        width: 200px;
+        font-size: 13px;
+    }
+
+    div button{
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+
+@media(max-width: 500px){
+    height: 25vh;
+    width: 100%;
+    padding: 0px;
+    gap: 15px;
+
+    h1{
+        font-size: 16px;
+    }
+
+    p{
+        font-size:13px;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    div{
+        width: 290px;
+        height: 40px;
+    }
+
+   div input{
+        width: 130px;
+    }
+}
 `;
 
 export default Wrapper;

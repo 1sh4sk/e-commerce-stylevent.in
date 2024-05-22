@@ -2,13 +2,20 @@ import Wrapper from "./NavbarWrapper"
 
 import logo from '../../assets/logo.png'
 import { FaCartShopping } from "react-icons/fa6";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
     const [menu, setMenu] = useState("shop");
     const { getTotalCartItems } = useContext(ShopContext);
+    const menuRef = useRef();
+
+    const toggle = (e) => {
+        menuRef.current.classList.toggle('nav-menu-visible');
+        e.target.classList.toggle('open');
+    }
 
     return (
         <Wrapper>
@@ -17,7 +24,9 @@ const Navbar = () => {
                 {/* <p>Stylevent.in</p> */}
             </div>
 
-            <ul className="nav-menu">
+            <div onClick={toggle}><GiHamburgerMenu className="nav-toggle-icon" /></div>
+
+            <ul ref={menuRef} className="nav-menu">
                 <li onClick={() => { setMenu("shop") }}>
                     <Link to='/' style={{ textDecoration: "none", color: "#191919" }}>Shop</Link>
                     {menu === "shop" ? <hr /> : null}</li>
