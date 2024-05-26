@@ -67,6 +67,68 @@ padding: 100px 0px;
     font-size: 14px;
     font-weight: 500;
 }
+
+@media(max-width: 1280px){
+    
+        padding-top: 50px;
+    
+    .loginsignup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 600px;
+    }
+
+    .loginsignup-container h1{
+        margin: 10px 0px;
+    }
+
+    .loginsignup-fields{
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .loginsignup-fields input{
+        height: 65px;
+        width: 100%;
+    }
+
+    .loginsignup-container button{
+        width: 100%;
+    }
+
+    .loginsignup-login{
+        font-size: 16px;
+    }
+
+    .loginsignup-agree{
+        font-size: 12px;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 800px){
+    .loginsignup-container{
+        height: 500px;
+        padding: 20px 30px;
+    }
+
+    .loginsignup-container h1{
+        font-size: 24px;
+    }
+
+    .loginsignup-fields{
+        margin-top: 20px;
+    }
+
+    .loginsignup-fields input{
+        height: 50px;
+    }
+
+    .loginsignup-container button{
+        height: 50px;
+        font-size: 16px;
+    }
+}
 `;
 
 export default Wrapper;

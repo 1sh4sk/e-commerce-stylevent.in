@@ -30,6 +30,18 @@ margin: 120px 170px;
     padding: 48px;
     padding-bottom: 70px;
 }
+
+@media(max-width: 1280px){
+    margin: 60px;
+}
+
+@media(max-width: 800px){
+    margin: 60px 20px;
+
+    .descriptionbox-description{
+        font-size: 14px;
+    }
+}
 `;
 
 export default Wrapper;
