@@ -103,7 +103,7 @@ app.post('/addproduct', async (req, res) => {
     await product.save();
     console.log("saved");
     res.json({
-        sucess: true,
+        success: true,
         name: req.body.name,
     });
 });
@@ -118,6 +118,15 @@ app.post('/removeproduct', async (req, res) => {
         name: req.body.name
     })
 });
+
+//creating API to get all the products
+
+app.get('/allproducts', async (req, res) => {
+    let products = await Product.find({});
+    console.log("all products fetched");
+
+    res.send(products);
+})
 
 app.listen(port, (error) => {
     if (!error) {
