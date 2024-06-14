@@ -21,7 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Shop />} />
-          <Route path='/hijabs' element={<ShopCategory banner={men_banner} category="hijabs" />} />
+          <Route path='/hijabs' element={<ShopCategory banner={men_banner} category="hijab" />} />
           <Route path='/abaya' element={<ShopCategory banner={women_banner} category="abaya" />} />
           <Route path='/namaz-khimar' element={<ShopCategory banner={kids_banner} category="namaz-khimar" />} />
           <Route path="/product" element={<Product />} >

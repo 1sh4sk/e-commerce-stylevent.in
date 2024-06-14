@@ -12,6 +12,12 @@ const Product = () => {
     const { productId } = useParams();
 
     const product = all_product.find((e) => e.id === Number(productId));
+
+    // Check if product is not found
+    if (!product) {
+        return <div>Product not found</div>;
+    }
+
     return (
         <div>
             <Breadcrum

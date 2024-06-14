@@ -1,14 +1,22 @@
 import Wrapper from "./PopularWrapper"
-import data_product from "../../assets/data"
+// import data_product from "../../assets/data"
 import Item from "../Items/Item"
+import { useEffect, useState } from "react"
 
 const Popular = () => {
+
+    const [popularProducts, setPopularProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:4000/popularinhijabs").then((res) => res.json()).then((data) => setPopularProducts(data));
+    }, [])
+
     return (
         <Wrapper className="popular">
-            <h1>POPULAR IN ABAYA</h1>
+            <h1>POPULAR IN HIJAB</h1>
             <hr />
             <div className="popular-item">
-                {data_product.map((item, i) => {
+                {popularProducts.map((item, i) => {
                     return <Item
                         key={i}
                         id={item.id}

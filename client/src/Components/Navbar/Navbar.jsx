@@ -41,7 +41,13 @@ const Navbar = () => {
             </ul>
 
             <div className="nav-login-cart">
-                <Link to='/login' style={{ textDecoration: "none" }}><button>Login</button></Link>
+                {localStorage.getItem('auth-token') ?
+                    <button onClick={() => {
+                        localStorage.removeItem('auth-token');
+                        window.location.replace('/');
+                    }}>Logout</button> :
+                    <Link to='/login' style={{ textDecoration: "none" }}><button>Login</button></Link>
+                }
                 <Link to='/cart' style={{ textDecoration: "none", color: "#515151" }}><FaCartShopping className="cart-icon" /></Link>
                 <div className="nav-cart-count">
                     {getTotalCartItems()}
